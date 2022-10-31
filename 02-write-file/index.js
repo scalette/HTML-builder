@@ -13,12 +13,12 @@ let rd = readline.createInterface({
 })
 
 rd.on('line', line => 
-{ if (line === 'exit'){
-  console.log('End of input. Chiao!');
-  process.exit(0);
-} else{
-  output.write(line + '\n')
-}
+  { if (line === 'exit'){
+    console.log('End of input. Chiao!');
+    process.exit(0);
+  } else{
+    output.write(line + '\n')
+  }
 })
 
 process.on('SIGINT', () => {
