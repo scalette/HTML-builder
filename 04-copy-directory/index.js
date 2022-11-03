@@ -1,19 +1,8 @@
 const path = require('path')
 const fs = require('fs')
-
-
 const pathToDir = path.join(__dirname, 'files');
 const pathToDirCopy = path.join(__dirname, 'files-copy');
 
-// fs.readdir(pathToDirCopy, (err, files) => {
-//   if (err) throw err;
-
-//   for (const file of files) {
-//     fs.unlink(path.join(pathToDirCopy, file), (err) => {
-//       if (err) throw err;
-//     });
-//   }
-// });
 fs.rm(pathToDirCopy,{ force: true, recursive: true }, err => {
   if (err) throw err
   console.log(`${pathToDirCopy} is deleted!`)
